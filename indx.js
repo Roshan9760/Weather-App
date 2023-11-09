@@ -81,8 +81,6 @@ async function fetchUserWeatherInfo(coordinates) {
     }
     catch(err) {
         loadingScreen.classList.remove("active");
-        //HW
-
     }
 
 }
@@ -119,7 +117,9 @@ function getLocation() {
         navigator.geolocation.getCurrentPosition(showPosition);
     }
     else {
-        //HW - show an alert for no gelolocation support available
+       //show an alert for no gelolocation support available
+        alert("No gelolocation support available");
+        return;
     }
 }
 
